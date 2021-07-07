@@ -1,0 +1,29 @@
+package _10_i;
+
+import java.util.Scanner;
+
+/**
+ * @author ：Rwto
+ * @date ：Created in 2021/7/7 17:32
+ * @description：斐波那契数列 递归
+ */
+public class Solution01 {
+    public int fib(int n){
+        if(n==1) return 1;
+        if(n==0) return 0;
+
+        return (fib(n-1)+fib(n-2))%1000000007;
+    }
+
+    public static void main(String[] args) {
+
+
+        Scanner sca = new Scanner(System.in);
+        while(true){
+
+            int num = sca.nextInt();
+            if(num<0)break;
+            System.out.println(new Solution01().fib(num));
+        }
+    }
+}
